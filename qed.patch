@@ -1,0 +1,26 @@
+From 9cd1b1c0975fedc5ac053d1621918c332f4d3aaa Mon Sep 17 00:00:00 2001
+From: Petr Oros <poros@redhat.com>
+Date: Wed, 10 Aug 2016 16:38:21 +0200
+Subject: [PATCH] Backport qed for kernel-3.10.0-327.el7
+
+Signed-off-by: Petr Oros <poros@redhat.com>
+---
+ drivers/net/ethernet/qlogic/qed/qed_main.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/net/ethernet/qlogic/qed/qed_main.c b/drivers/net/ethernet/qlogic/qed/qed_main.c
+index 8b22f87..ca42518 100644
+--- a/drivers/net/ethernet/qlogic/qed/qed_main.c
++++ b/drivers/net/ethernet/qlogic/qed/qed_main.c
+@@ -45,7 +45,7 @@ MODULE_VERSION(DRV_MODULE_VERSION);
+ 	__stringify(FW_ENGINEERING_VERSION)
+ 
+ #define QED_FW_FILE_NAME	\
+-	"qed/qed_init_values_zipped-" FW_FILE_VERSION ".bin"
++	"qed_init_values_zipped-" FW_FILE_VERSION ".bin"
+ 
+ MODULE_FIRMWARE(QED_FW_FILE_NAME);
+ 
+-- 
+1.8.3.1
+
